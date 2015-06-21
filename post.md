@@ -15,7 +15,7 @@ etcd is a distributed key/value store which is designed to have no single point 
 
    ![etcd cluster](https://coreos.com/assets/images/media/Etcd-Replication.png)
 
-   It distributes configuration details to every machine in your cluster. etcd enables a cluster will always have the correct configuration data. 
+   It distributes configuration details to every machine in your cluster. etcd ensures a cluster will always have the correct configuration data. 
 
    etcd is also highly customizable and you can read and write to it in both curl and JSON. One use-case is to run a microservice container for just PostgreSQL and have etcd store the database connection details to be picked up by other microservices.
     
@@ -49,9 +49,8 @@ Finally, here are the top reasons to try out CoreOS:
 
 1. Reason #1 to go with CoreOS is etcd which was mentioned above. As the CoreOS website says: "Configuration values are distributed within the cluster for your applications to read. Values can be changed programatically and smart applications can reconfigure automatically. You'll never have to run Chef on every machine in order to change a single config value ever again."
 2. If you care about high availability at all, deploying using CoreOS is one of the best ways to achieve that with a relatively low price point. 
-3. Though you can rig up Docker containers with your environment to save time in things like developer onboarding, CoreOS takes it a step further by allowing you to replicate cluster and network settings as well.
 4. It lets you serve different versions of software on different machines and update machines without any downtime
-5. Though Docker helps you provide similar environments in production and development, CoreOS goes one step further by replicating cluster/network settings between dev and prod as well. As discussed before it also makes sure that the infrastructure always has the right configuration and everything has the right versioning. 
+5. Though Docker helps you provide similar environments in production and development, CoreOS goes one step further by replicating cluster and network settings between dev and prod as well. As discussed before it also makes sure that the infrastructure always has the right configuration and everything has the right versioning. 
 6. New developers can get up and running quickly rather than waste time installing all the required software and versions on their machine and making sure that nothing conflicts.
 7. It can drastically reduce cost by replicating software services like Heroku. Even though you need multiple machines to truly take advantage of CoreOS, CoreOS is now supported by every major cloud storage provider, including AWS and Digital Ocean, the latter of which provides machines for only $5/month.
 8. It has a very active open source community with (at the time of this writing) 6747 stars, 172 contributors, and over 40 pull requests merged in within the last two weeks. As mentioned before, this may potentially be a problem as one of the central tenets of the security that CoreOS offers out of the box is automatic updates. Though you cannot turn this feature off, you can select an [update strategy](https://coreos.com/docs/cluster-management/setup/update-strategies/) to control when and how your machines will update.
