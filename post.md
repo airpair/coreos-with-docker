@@ -1,4 +1,4 @@
-_NOTE: This post is geared towards those who want a basic overview of Docker "containers" and how using CoreOS & etcd & fleet on machines with these containers can make life for devs/devOps much easier_
+_NOTE: This post is geared towards those who want a basic overview of Docker "containers" and how using CoreOS & etcd & fleet on machines with these containers can make life for devs/devOps much easier._
 
 ## What is CoreOS & Docker
 
