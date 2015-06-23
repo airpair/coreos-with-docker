@@ -1,3 +1,5 @@
+_NOTE: This post is geared towards those who want a basic overview of Docker "containers" and how using CoreOS & etcd & fleet on machines with these containers can make life for devs/devOps much easier._
+
 ## What is CoreOS & Docker
 
 ### CoreOS
@@ -43,7 +45,7 @@ Note that CoreOS does not ship with support for cron so those who love setting u
 
 *Comparing two apps - one that is Docker only and another which is Docker and CoreOS*
 
-The difference between Docker-only setups vs Docker and CoreOS setups can best be explained by looking at two PaaS apps (both designed to replace Heroku at a much lower price point) - Dokku and Deis. In a nutshell, Dokku is a simple, single-host mini-PaaS for hobby-type apps that uses Docker while Deis is a multi-host full replacement for Heroku for enterprise type apps that uses Docker for containerization and CoreOS for clustering. Deis is highly available and provides more security out of the box due to its usage of CoreOS but it comes with a higher price point because you need at least 3 machines to set it up. The biggest selling point of Deis is that it provides easy scalability - you can add or remove machines from the platform at will, while with Dokku you are stuck to just a single machine. 
+The difference between Docker-only setups vs Docker and CoreOS setups can best be explained by looking at two Platform as a Service (PaaS) apps (both designed to replace Heroku at a much lower price point) - Dokku and Deis. In a nutshell, Dokku is a simple, single-host mini-PaaS for hobby-type apps that uses Docker while Deis is a multi-host full replacement for Heroku for enterprise type apps that uses Docker for containerization and CoreOS for clustering. Deis is highly available and provides more security out of the box due to its usage of CoreOS but it comes with a higher price point because you need at least 3 machines to set it up. The biggest selling point of Deis is that it provides easy scalability - you can add or remove machines from the platform at will, while with Dokku you are stuck to just a single machine. 
 
 
 ## 7 Reasons Docker & CoreOS Are Great
@@ -62,7 +64,7 @@ Finally, here are the top reasons to try out CoreOS:
 
 6. It can drastically reduce cost by replicating software services like Heroku. Even though you need multiple machines to truly take advantage of CoreOS, CoreOS is now supported by every major cloud storage provider, including AWS and Digital Ocean, the latter of which provides machines for only $5/month.
 
-7. It has a very active open source community with (at the time of this writing) 6747 stars, 172 contributors, and over 40 pull requests merged in within the last two weeks. As mentioned before, this may potentially be a problem as one of the central tenets of the security that CoreOS offers out of the box is automatic updates. Though you cannot turn this feature off, you can select an [update strategy](https://coreos.com/docs/cluster-management/setup/update-strategies/) to control when and how your machines will update.
+7. It has a very active open source community with (at the time of this writing) 6764 stars, 172 contributors, and over 40 pull requests merged in within the last two weeks for etcd. This may potentially be a problem, as one of the central tenets of the security that CoreOS offers out of the box is automatic updates on all your machines. Though you cannot turn this feature off, you can select an [update strategy](https://coreos.com/docs/cluster-management/setup/update-strategies/) to control when and how your machines will update.
 
 
 
