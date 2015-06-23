@@ -1,7 +1,7 @@
 ## What is CoreOS & Docker
 
 ### CoreOS
-[CoreOS](http://www.coreos.com) is a barebones Linux distribution designed to make large deployments, using different softwares and dependencies, easier to scale and easier to manage. It is built for high availability and security. It does not come with a package manager and thus requires containers such as those provided by Docker.
+[CoreOS](http://www.coreos.com) is a barebones Linux distribution designed to make large multiple-machine deployments, using different softwares and dependencies, easier to scale and easier to manage. It is built for high availability and security. It does not come with a package manager and thus requires containers such as those provided by Docker. It uses "fleet" for cluster management and "etcd" for service discovery and keeping configuration up to date across the cluster.
 
 ### Docker
 [Docker](www.docker.com)'s ["What is Docker" page](https://www.docker.com/whatisdocker) explains: "Docker allows you to package an application with all of its dependencies into a standardized unit for software development."
@@ -15,9 +15,9 @@ For instance, you can install a Rails app and all its dependencies into one cont
 
 ![etcd cluster](https://coreos.com/assets/images/media/Etcd-Replication.png)
 
-It distributes configuration details to every machine in your cluster. etcd ensures a cluster will always have the correct configuration data. 
+etcd distributes configuration details to every machine in your cluster and ensures a cluster will always have the correct configuration data.
 
-etcd is also highly customizable and you can read and write to it in both curl and JSON. One use-case is to run a microservice container for just PostgreSQL and have etcd store the database connection details to be picked up by other microservices.
+etcd is also highly customizable and you can read and write to it in both curl and JSON. For example, one use-case is to run a microservice container for just PostgreSQL and have etcd store the database connection details to be picked up by other microservices.
     
 Going off the example in the previous section about Docker, with CoreOS you can separate that Rails app into its various pieces, with one container running Rails, one container running PostgreSQL, one container running a Javascript MVC like Ember and have them all pull their configuration from etcd when they start.
 
@@ -41,7 +41,7 @@ Note that CoreOS does not ship with support for cron so those who love setting u
 
 ## Docker vs Docker and CoreOS
 
-*Two apps - one that is Docker only and another which is Docker and CoreOS*
+*Comparing two apps - one that is Docker only and another which is Docker and CoreOS*
 
 The difference between Docker-only setups vs Docker and CoreOS setups can best be explained by looking at two PaaS apps (both designed to replace Heroku at a much lower price point) - Dokku and Deis. In a nutshell, Dokku is a simple, single-host mini-PaaS for hobby-type apps that uses Docker while Deis is a multi-host full replacement for Heroku for enterprise type apps that uses Docker for containerization and CoreOS for clustering. Deis is highly available and provides more security out of the box due to its usage of CoreOS but it comes with a higher price point because you need at least 3 machines to set it up. The biggest selling point of Deis is that it provides easy scalability - you can add or remove machines from the platform at will, while with Dokku you are stuck to just a single machine. 
 
