@@ -1,16 +1,16 @@
-_NOTE: This post is geared towards those who want a basic overview of Docker "containers" and how using CoreOS & etcd & fleet on machines with these containers can make life for devs/devOps much easier._
+_NOTE: This post is geared towards those who want a basic overview of Docker "containers" and how using CoreOS & etcd & fleet on machines with these containers can make life for devs/devOps much easier_
 
 ## What is CoreOS & Docker
 
 ### CoreOS
-[CoreOS](http://www.coreos.com) is a barebones Linux distribution designed to make large multiple-machine deployments, using different softwares and dependencies, easier to scale and easier to manage. It is built for high availability and security. It does not come with a package manager and thus requires containers such as those provided by Docker. It uses "fleet" for cluster management and "etcd" for service discovery and keeping configuration up to date across the cluster.
+[CoreOS](http://www.coreos.com) is a barebones Linux distribution designed to make large multiple-machine deployments, using different softwares and dependencies, easier to scale and easier to manage. It is built for high availability and security. It does not come with a [package manager](https://en.wikipedia.org/wiki/Package_manager) and thus requires containers such as those provided by Docker. It uses "fleet" for cluster management and "etcd" for service discovery and keeping configuration up to date across the cluster.
 
 ### Docker
 [Docker](www.docker.com)'s ["What is Docker" page](https://www.docker.com/whatisdocker) explains: "Docker allows you to package an application with all of its dependencies into a standardized unit for software development."
 
 Put another way, Docker is a platform built using Linux containers (LXC) that isolates processes into "containers". These containers allow you to distribute and isolate your resources so you can always be sure that you have a clean environment when deploying. 
   
-For instance, you can install a Rails app and all its dependencies into one container, and then run that container from any OS without worrying about going through the time-consuming configuration and setup process on your own machine and worrying about other packages you may have installed conflicting with the app you are working on. Since containers take up a much lower memory footprint than VMs, you can also use Docker (with something like Vagrant) to replicate production environments on a development machine with less power than the production environment.
+For instance, you can install a Rails app and all its dependencies into one container, and then run that container from any OS without worrying about going through the time-consuming configuration and setup process on your own machine and worrying about other packages you may have installed conflicting with the app you are working on. Since containers take up a much lower memory footprint than VMs, you can also use Docker (with something like [Vagrant](http://docs.vagrantup.com/v2/docker/basics.html)) to replicate production environments on a development machine with less power than the production environment.
 
 ### etcd
 [etcd](https://coreos.com/etcd/) is a distributed key/value store which is designed to have no single point of failure due to its multiple node architecture. 
