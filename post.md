@@ -70,8 +70,8 @@ Finally, here are the top reasons to try out CoreOS:
 
 
 ** Sources: **
-1. [CoreOs official website](www.coreos.com)
-2. [Docker official website](www.docker.com)
+1. [CoreOs official website](http://www.coreos.com)
+2. [Docker official website](http://www.docker.com)
 3. [Playstation talk](https://www.youtube.com/watch?v=M9hBsRUeRdg)
 4. [Deis official website](http://deis.io/)
 5. [Digital Ocean CoreOS tutorial](https://www.digitalocean.com/community/tutorials/an-introduction-to-coreos-system-components)
