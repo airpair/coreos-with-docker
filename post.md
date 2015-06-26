@@ -4,7 +4,7 @@
 [CoreOS](http://www.coreos.com) is a barebones Linux distribution designed to make large deployments, using different softwares and dependencies, easier to scale and easier to manage. It is built for high availability and security. It does not come with a package manager and thus requires containers such as those provided by Docker.
 
 ### Docker
-[Docker](www.docker.com)'s ["What is Docker" page](https://www.docker.com/whatisdocker) explains: "Docker allows you to package an application with all of its dependencies into a standardized unit for software development."
+[Docker](http://www.docker.com)'s ["What is Docker" page](https://www.docker.com/whatisdocker) explains: "Docker allows you to package an application with all of its dependencies into a standardized unit for software development."
 
 Put another way, Docker is a platform built using Linux containers (LXC) that isolates processes into "containers". These containers allow you to distribute and isolate your resources so you can always be sure that you have a clean environment when deploying. 
   
